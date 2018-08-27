@@ -1,19 +1,79 @@
-html, body{ margin: 0;padding: 0; }
+html, body{ margin: 0;padding: 0; overflow: hidden;  }
 *{ font-size: 16px;}
 
+/*Common Css*/
+.mainBlock { width:640px;margin: auto;  }
+
 /*Login Page*/
-.loginpage .loginMain > div{ height:100vh;  }
-.loginpage .loginMain .left_side{ background: #004185; }
-.loginpage .loginMain .right_side { position: relative; }
-.loginpage .loginMain .right_side > div{ 
-    display: table;
+.loginpage > div {  height:50vh; position: relative; }
+.loginpage > div:first-child{ background: url('assets/images/loginBanner.jpg') no-repeat;background-size:cover;}
+.loginpage > div:first-child::after{content: '';position: absolute;width: 100%;height: 100%;left: 0;top:0;background: #fe2950cf;}
+.loginpage > div:last-child::before{content: '';
+    position: absolute;
+    bottom: 66%;
+    z-index: 1;
+    left: 0;
+    width: 100px;
+    height: 150px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(75deg);
+    background: #ffffff;}
+.loginpage > div:last-child::after{ content: '';
+    position: absolute;
+    bottom: 66%;
+    z-index: 1;
+    right: 0;
+    width: 100px;
+    height: 150px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(-75deg);
+    background: #ffffff;}
+.loginPageBottom{
+    position: relative;
+}
+.loginPageBottom .loginForm{
+    position: relative;
+    width: 85%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 50vh;
+    /* overflow: hidden; */
+    background: #ff2a51;
+    z-index: 14;
+    top: -70%;
+    border-radius: 50px;
+    /* box-shadow: -1px -8px 20px 0px #291e2040; */
+    /* overflow: hidden; */
+    /* background-image: linear-gradient(-90deg, red, yellow); */
+    border-bottom-right-radius: 0;  
+}
+.loginPageBottom .loginForm::after{
+    border-bottom-right-radius: 40px;
+    position: absolute;
     width: 100%;
-    height: 100%;
-    vertical-align: middle;
- }
- .loginpage .loginMain .right_side > div .mainDiv{ 
-     display: table-cell;
-     vertical-align: middle;
-  }
-.loginpage .form-control{     border-radius: 17px; }
-.loginpage .btn-primary{     border-radius: 17px; }
+    height: 53%;
+    /* background: #9C27B0; */
+    top: 99%;
+    right: 0px;
+    content: '';
+    -webkit-transform: rotate(18deg);
+    transform: rotate(0deg);
+    /* visibility: hidden; */
+    background: linear-gradient(20deg, transparent 50%, #ff2a51 50%);
+    z-index: -1;
+    overflow: hidden;
+}
+/* .loginPageBottom .loginForm::before{
+    position: absolute;
+    width:0px;
+	border-radius: 0 50% 0 50%;
+	border-bottom: 50px solid red;
+	border-left: 50px solid #f8b334;
+	border-top: 50px solid #fc6204;
+	border-right: 50px solid #cb2025;
+    left: 0;
+    top: 0px;
+    background: #fff;
+    content: '';
+} */
