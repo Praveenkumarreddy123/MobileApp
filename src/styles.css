@@ -1,0 +1,19 @@
+html, body{ margin: 0;padding: 0; }
+*{ font-size: 16px;}
+
+/*Login Page*/
+.loginpage .loginMain > div{ height:100vh;  }
+.loginpage .loginMain .left_side{ background: #004185; }
+.loginpage .loginMain .right_side { position: relative; }
+.loginpage .loginMain .right_side > div{ 
+    display: table;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+ }
+ .loginpage .loginMain .right_side > div .mainDiv{ 
+     display: table-cell;
+     vertical-align: middle;
+  }
+.loginpage .form-control{     border-radius: 17px; }
+.loginpage .btn-primary{     border-radius: 17px; }
